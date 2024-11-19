@@ -1,0 +1,17 @@
+﻿@page "/counter"
+@rendermode InteractiveServer
+
+<PageTitle>Create STL file</PageTitle>
+
+<h1>Create STL file</h1>
+
+<button class="btn btn-primary" @onclick="CreateSTLFile">Create STL cube</button>
+
+@code {
+
+    private void CreateSTLFile()
+    {
+        var writer = new STLwriter();
+        writer.CreateSTLFile();
+    }
+}
